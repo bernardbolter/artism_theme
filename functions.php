@@ -1,8 +1,6 @@
 <?php
-/**********************************************************************************
-
-artism_theme_setup - sets up the artwork post type for the theme
-
+/*
+Sets up the Artwork post type for the theme
 **********************************************************************************/
 
 function artism_theme_setup() {
@@ -25,7 +23,19 @@ function artism_theme_setup() {
   /* Register Artwork postings fields with the API */
   include( get_stylesheet_directory() . '/artism-functions/artism-api-fields.php' );
 
+  /* Enqueue scripts for Artwork Admin */
+  include( get_stylesheet_directory() . '/artism-functions/enqueue-scripts.php' );
 
 }
 
 add_action( 'after_setup_theme', 'artism_theme_setup' );
+
+/*
+Load scripts and styles for the site
+**********************************************************************************/
+
+function artism_enqueue_scripts() {
+  wp_enqueue_style( 'artism-styles', get_template_directory_uri() . '/style.css', '', time() );
+}
+
+add_action( 'wp_enqueue_scripts', 'artism_enqueue_scripts' );

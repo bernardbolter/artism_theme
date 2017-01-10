@@ -6,7 +6,8 @@ function artism_description_metaboxs() {
     'Artwork Information',
     'artism_description_callback',
     'artwork',
-    'advanced'
+    'normal',
+    'high'
   );
 }
 
@@ -406,5 +407,3 @@ function artism_description_meta_save( $post_id ) {
 }
 
 add_action( 'save_post', 'artism_description_meta_save');
-
- ?>

@@ -311,5 +311,3 @@ function artism_register_custom_fields() {
 function artism_show_fields($object, $field_name, $request) {
   return get_post_meta($object['id'], $field_name, true);
 }
-
-?>

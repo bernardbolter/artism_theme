@@ -57,5 +57,3 @@ function artism_register_post_type() {
 }
 
 add_action( 'init', 'artism_register_post_type' );
-
-?>
