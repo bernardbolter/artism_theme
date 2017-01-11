@@ -77,13 +77,6 @@ function artism_register_custom_fields() {
   );
   register_rest_field(
     'artwork',
-    'text',
-    array(
-        'get_callback' => 'artism_show_fields'
-    )
-  );
-  register_rest_field(
-    'artwork',
     'creator',
     array(
         'get_callback' => 'artism_show_fields'
@@ -92,20 +85,6 @@ function artism_register_custom_fields() {
   register_rest_field(
     'artwork',
     'contributor',
-    array(
-        'get_callback' => 'artism_show_fields'
-    )
-  );
-  register_rest_field(
-    'artwork',
-    'copyrightHolder',
-    array(
-        'get_callback' => 'artism_show_fields'
-    )
-  );
-  register_rest_field(
-    'artwork',
-    'copyrightYear',
     array(
         'get_callback' => 'artism_show_fields'
     )

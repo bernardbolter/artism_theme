@@ -1,0 +1,196 @@
+.artwork {
+  width: 100%;
+}
+
+/* Artwork Header Styles
+   ========================================================================== */
+
+.artwork-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #b2b2b2;
+  margin: 0;
+  padding: 0;
+}
+
+.artwork-header a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  opacity: .6;
+  margin: 10px 0 10px 20px;
+  align-self: center;
+}
+
+.artwork-header span {
+  width: 22px;
+  height: 17px;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  margin-right: 4px;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAARCAYAAADZsVyDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0REY2Nzg5OENGNEQxMUU2QTQ5NENCMDcxNTcxMjVFRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0REY2Nzg5OUNGNEQxMUU2QTQ5NENCMDcxNTcxMjVFRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjI5REFCREE1Q0VGNDExRTZBNDk0Q0IwNzE1NzEyNUVFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjI5REFCREE2Q0VGNDExRTZBNDk0Q0IwNzE1NzEyNUVFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+rXYEKgAAAPNJREFUeNpi/P//PwM+8OXLVwcgtZ+BMPgGxAt5eLizQBwmBuoBLiDOBDrkGLUNhgFLoOGRjISCghgANMgXSK0FYlao0FGquBgYrpuBVCeSkBYTEa6JIdL8vcgcJjwGCgDxKSBzMTm+YMLjyldAbEqCWQLIHBZ0VwKpXSQaCAOZSOw/LGiunIcUs+iZBJ9LQYa6IYntZ/z8+QslrsQGQOlXCRTGtVQ2NAOY/B6AMwjQq3ZAgY3oEYAE3hMw8A+0PGkDGnoRJICS84AWrAJSoVgyACNFyQ1oQBiQsgfiD5SGCRMW1x0CYkEgczVVDaaW6wECDAApnVY865l8iQAAAABJRU5ErkJggg==');
+}
+
+.artwork-header a:hover {
+  opacity: 1;
+}
+
+.artwork-header p {
+  display: none;
+}
+
+@media (min-width: 701px) {
+  .artwork-header p {
+    font-size: 12px;
+    color: #f1f1f2;
+    font-weight: 300;
+    margin: 10px 20px 10px 0;
+    align-self: center;
+    letter-spacing: .05em;
+    display: block;
+  }
+}
+
+
+/* Artwork Image Styles
+   ========================================================================== */
+
+.artwork-container {
+  width: 90%;
+  margin: 10px auto;
+  display: block;
+}
+
+.artwork-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.artwork-title h1 {
+  align-self: flex-end;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 20px 0 6px 0;
+  color: #231f20;
+}
+
+.artwork-title h2 {
+  align-self: flex-end;
+  font-size: 14px;
+  font-weight: 300;
+  color: #6d6e70;
+  margin: 0 0 10px 0;
+}
+
+.artwork img {
+  width: 100%;
+  height: auto;
+}
+
+/* Artwork Info Styles
+   ========================================================================== */
+
+.artwork-info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 801px) {
+  .artwork-info-container{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.artwork-info {
+  width: 100%;
+  margin: 2% 0;
+  padding: 0;
+}
+
+.artwork-info h5 {
+  font-size: 10px;
+  font-weight: 300;
+  color: #999;
+  text-transform: uppercase;
+  margin: 0 0 3px 0;
+  padding: 0;
+  text-align: left;
+}
+
+.artwork-info h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
+  margin: 0 0 15px 0;
+  padding: 0;
+  text-align: left;
+}
+
+.artwork-info h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  margin: 10px 15px 15px 0;
+  padding: 0;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.artwork-info a {
+  text-decoration: none;
+  color: #555;
+}
+
+/* Artwork Complementary Images Styles
+  ========================================================================== */
+
+.artwork-images {
+  width: 100%;
+  margin: 2% 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.artwork-images img {
+  max-width: 500px;
+  align-self: flex-end;
+}
+
+.artwork-images h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
+  margin: 15px 0 5px 0;
+  padding: 0;
+  text-align: right;
+}
+
+.artwork-images h4 {
+  font-size: 14px;
+  font-weight: 300;
+  color: #888;
+  margin: 0 0 15px 0;
+  padding: 0;
+  text-align: right;
+  display: inline-block;
+}
+
+.artwork-images a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 11px;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+  padding: 0;
+  text-align: right;
+}

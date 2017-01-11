@@ -1,10 +1,4 @@
 jQuery(document).ready(function() {
-    jQuery( '.datepicker' ).datepicker({
-      dateFormat: 'yy-mm-dd',
-      changeMonth: true,
-      changeYear: true,
-      yearRange: "-200:+0"
-    });
 
     var addButton = document.getElementById( 'primary-image-upload-button');
     var addButtonComplementary = document.getElementById( 'complementary-image-upload-button');

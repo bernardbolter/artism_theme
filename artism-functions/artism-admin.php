@@ -128,17 +128,6 @@ function artism_description_callback( $post ) {
         <h4 class="artism__description--content">Description: The subject matter of the content.</h4>
     </div>
 
-    <?php /* TEXT */ ?>
-
-    <div class="artism__input">
-        <label for="text" class="artism__input--title">Text <span class="artism__input--property"> - property | text</span></label>
-        <textarea name="text" rows="5" cols="30" class="artism__input--field" name="text" id="text"><?php if ( ! empty ( $artism_stored_meta['text'] ) ) echo esc_attr( $artism_stored_meta['text'][0] ); ?></textarea>
-    </div>
-    <div class="artism__description">
-        <h3 class="artism__description--header">Expected Type: Text</h3>
-        <h4 class="artism__description--content">Description: The textual content of this CreativeWork.</h4>
-    </div>
-
     <?php /* CREATOR */ ?>
 
     <div class="artism__input">
@@ -168,30 +157,8 @@ function artism_description_callback( $post ) {
         <input type="text" class="artism__input--field datepicker" name="dateCreated" id="dateCreated" value="<?php if ( ! empty ( $artism_stored_meta['dateCreated'] ) ) echo esc_attr( $artism_stored_meta['dateCreated'][0] ); ?>" />
     </div>
     <div class="artism__description">
-        <h3 class="artism__description--header">Expected Type: Date or DateTime ( Year-Month-Day ) </h3>
+        <h3 class="artism__description--header">Expected Type: Date or DateTime ( Just put the Year - It's Art ) </h3>
         <h4 class="artism__description--content">Description: The date on which the Artwork was created or the item was added to a DataFeed.</h4>
-    </div>
-
-    <?php /* COPYRIGHT HOLDER */ ?>
-
-    <div class="artism__input">
-        <label for="copyrightHolder" class="artism__input--title">Copyright Holder <span class="artism__input--property"> - property | copyrightHolder</span></label>
-        <input type="text" class="artism__input--field" name="copyrightHolder" id="copyrightHolder" value="<?php if ( ! empty ( $artism_stored_meta['copyrightHolder'] ) ) echo esc_attr( $artism_stored_meta['copyrightHolder'][0] ); ?>" />
-    </div>
-    <div class="artism__description">
-        <h3 class="artism__description--header">Expected Type: Organization or Person</h3>
-        <h4 class="artism__description--content">Description: The party holding the legal copyright to the CreativeWork.</h4>
-    </div>
-
-    <?php /* COPYRIGHT YEAR */ ?>
-
-    <div class="artism__input">
-        <label for="copyrightYear" class="artism__input--title">Copyright Year <span class="artism__input--property"> - property | copyrightYear</span></label>
-        <input type="number" class="artism__input--field" name="copyrightYear" id="copyrightYear" value="<?php if ( ! empty ( $artism_stored_meta['copyrightYear'] ) ) echo esc_attr( $artism_stored_meta['copyrightYear'][0] ); ?>" />
-    </div>
-    <div class="artism__description">
-        <h3 class="artism__description--header">Expected Type: Number </h3>
-        <h4 class="artism__description--content">Description: The year during which the claimed copyright for the CreativeWork was first asserted.</h4>
     </div>
 
     <?php /* CONTENT LOCATION */ ?>
