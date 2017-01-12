@@ -263,6 +263,39 @@ function artism_description_callback( $post ) {
         <h4 class="artism__description--content">Description: Code for series declaration. <span class="artism__input--property">ach = A Colorful History | dcs = Digital City Series | acs = Art Collision Series | vls = Vanishing Landscape Series | ogp = OG Oil Paintings | per = Performance Art | wat = Watercolour Paintings | dra = Drawings | pho = Photography</span></h4>
     </div>
 
+    <?php /* PRINTS AVAILABLE */ ?>
+
+    <div class="artism__input">
+        <label for="printAvailable" class="artism__input--title">Print Available <span class="artism__input--property"> - property | printAvailable</span></label>
+        <input type="text" class="artism__input--field" name="printAvailable" id="printAvailable" value="<?php if ( ! empty ( $artism_stored_meta['printAvailable'] ) ) echo esc_attr( $artism_stored_meta['printAvailable'][0] ) ?>" />
+    </div>
+    <div class="artism__description">
+        <h3 class="artism__description--header">Expected Type: Text</h3>
+        <h4 class="artism__description--content">Description: Describe the Print that is available for this Artwork.</h4>
+    </div>
+
+    <?php /* PRINT PRICE */ ?>
+
+    <div class="artism__input">
+        <label for="printPrice" class="artism__input--title">Print Price <span class="artism__input--property"> - property | printPrice</span></label>
+        <input type="text" class="artism__input--field" name="printPrice" id="printPrice" value="<?php if ( ! empty ( $artism_stored_meta['printPrice'] ) ) echo esc_attr( $artism_stored_meta['printPrice'][0] ) ?>" />
+    </div>
+    <div class="artism__description">
+        <h3 class="artism__description--header">Expected Type: Text</h3>
+        <h4 class="artism__description--content">Description: The price of the Print.</h4>
+    </div>
+
+    <?php /* PRINTS LINK */ ?>
+
+    <div class="artism__input">
+        <label for="printURL" class="artism__input--title">Print URL <span class="artism__input--property"> - property | printURL</span></label>
+        <input type="text" class="artism__input--field" name="printURL" id="printURL" value="<?php if ( ! empty ( $artism_stored_meta['printURL'] ) ) echo esc_attr( $artism_stored_meta['printURL'][0] ) ?>" />
+    </div>
+    <div class="artism__description">
+        <h3 class="artism__description--header">Expected Type: URL</h3>
+        <h4 class="artism__description--content">Description: The URL of where the Print is available. </h4>
+    </div>
+
 
 
 <?php
@@ -368,6 +401,18 @@ function artism_description_meta_save( $post_id ) {
 
   if ( isset( $_POST['series'] ) ) {
     update_post_meta($post_id, 'series', sanitize_text_field($_POST['series']) );
+  }
+
+  if ( isset( $_POST['printAvailable'] ) ) {
+    update_post_meta($post_id, 'printAvailable', sanitize_text_field($_POST['printAvailable']) );
+  }
+
+  if ( isset( $_POST['printPrice'] ) ) {
+    update_post_meta($post_id, 'printPrice', sanitize_text_field($_POST['printPrice']) );
+  }
+
+  if ( isset( $_POST['printURL'] ) ) {
+    update_post_meta($post_id, 'printURL', sanitize_text_field($_POST['printURL']) );
   }
 
 

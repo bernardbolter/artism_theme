@@ -147,6 +147,27 @@ function artism_register_custom_fields() {
   );
   register_rest_field(
     'artwork',
+    'printAvailable',
+    array(
+        'get_callback' => 'artism_show_fields'
+    )
+  );
+  register_rest_field(
+    'artwork',
+    'printPrice',
+    array(
+        'get_callback' => 'artism_show_fields'
+    )
+  );
+  register_rest_field(
+    'artwork',
+    'printURL',
+    array(
+        'get_callback' => 'artism_show_fields'
+    )
+  );
+  register_rest_field(
+    'artwork',
     'image',
     array(
         'get_callback' => 'artism_show_fields'

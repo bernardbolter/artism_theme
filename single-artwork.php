@@ -115,6 +115,31 @@
               echo '<h5>KEYWORDS</h5>';
               echo '<h4 itemprop="keywords">' . $artwork_meta['keywords'][0] . '</h4>';
             endif;
+            echo '<hr />';
+            if ($artwork_meta['series'][0]) :
+              switch ($artwork_meta['series'][0]) {
+                case 'dcs':
+                  echo '<h5>SERIES</h5>';
+                  echo '<h3>Digital City Series</h3>';
+                  break;
+                default:
+                  echo '';
+              }
+            endif;
+            if ($artwork_meta['printAvailable'][0]) :
+              echo '<h5>AVAILABLE PRINT</h5>';
+              echo '<h4>' . $artwork_meta['printAvailable'][0] . '</h4>';
+            endif;
+            if ($artwork_meta['printPrice'][0]) :
+              echo '<h5>PRINT PRICE</h5>';
+              echo '<h4>' . $artwork_meta['printPrice'][0] . '</h4>';
+            endif;
+            if ($artwork_meta['printURL'][0]) :
+              echo '<h5>LINK TO PURCHASE</h5>';
+              echo '<h4><a href="http://' . $artwork_meta['printURL'][0] . '">Click here to purchase</a></h4>';
+            endif;
+            echo '<h5>CONTACT</h5>';
+            echo '<h3>b@bernardbolter.com</h3>';
            ?>
         </div><!-- .artwork-info -->
         <div class="artwork-images">

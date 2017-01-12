@@ -1,29 +1,27 @@
 <?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @package WordPress
- * @subpackage Artism
- * @since Artism 1.0
+/*
+ * 404 template, just like front page index
  */
+?>
 
-get_header(); ?>
+<?php get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<section class="artism-front-page">
+  <a href="http://bernardbolter.com">
+    <h1>Bernard John Bolter IV</h1>
+    <h3>artwork</h3>
+  </a>
+  <?php $artwork_loop = new WP_Query( array( 'post_type' => 'artwork', 'orderby' => 'rand', 'posts_per_page' => -1 ) ); ?>
+  <?php if ( $artwork_loop->have_posts() ) :
+       while ( $artwork_loop->have_posts() ) : $artwork_loop->the_post(); ?>
+        <a href="<?php the_permalink() ?>">
+          <?php the_post_thumbnail('thumbnail'); ?>
+          <span>
+            <h2><?php the_title() ?></h2>
+          </span>
+        </a>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'Artism' ); ?></h1>
-				</header><!-- .page-header -->
+  <?php endwhile; endif; wp_reset_postdata(); ?>
+</section>
 
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'Artism' ); ?></p>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
-
-<?php get_footer(); ?>
+<?php get_footer() ?>
