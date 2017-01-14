@@ -31,6 +31,9 @@ function artism_theme_setup() {
   /* Enqueue scripts for Artwork Admin */
   include( get_stylesheet_directory() . '/artism-functions/artism-admin-scripts.php' );
 
+  /* Remove CPT from URL structure */
+  include( get_stylesheet_directory() . '/artism-functions/artism-remove-slug.php' );
+
 }
 
 add_action( 'after_setup_theme', 'artism_theme_setup' );
@@ -44,7 +47,7 @@ function artism_enqueue_scripts() {
   wp_enqueue_style( 'artism-front-page' , get_template_directory_uri() . '/css/artism-front-page.css', '', time() );
   if ( is_singular( 'artwork' )) {
     wp_enqueue_style( 'artwork-single-styles', get_template_directory_uri() . '/css/artwork-single-style.css', '', time() );
-  } 
+  }
 }
 
 add_action( 'wp_enqueue_scripts', 'artism_enqueue_scripts' );

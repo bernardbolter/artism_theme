@@ -42,7 +42,7 @@ function artism_register_post_type() {
     // 'capabilities' => array(),
     'rewrite'             => array(
         'slug'       => 'artwork',
-        'with_front' => true,
+        'with_front' => false,
         'pages'      => true,
         'feeds'      => true,
     ),
