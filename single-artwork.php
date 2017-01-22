@@ -9,7 +9,7 @@
 <section class="artwork" itemscope itemtype="http://schema.org/VisualArtwork">
 
     <div class="artwork-header">
-      <a href="http://www.bernardbolter.com"><span></span> Back to bernardbolter.com</a>
+      <a href="http://bernardbolter.com"><span></span> Back to bernardbolter.com</a>
       <p><?php the_permalink() ?></p>
     </div>
 

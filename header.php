@@ -12,7 +12,7 @@
 <meta name="subject" content="Display of Bernard BOtler's Artwork">
 <meta name="topic" content="Art">
 <meta name="summary" content="A Catalog of Bernard Bolter's Artwork">
-<meta name="url" content="https://artwork.bernardbolter.com/">
+<meta name="url" content="http://artwork.bernardbolter.com/">
 <meta name="category" content="Art">
 <meta name="coverage" content="Worldwide">
 <meta name="distribution" content="Global">
